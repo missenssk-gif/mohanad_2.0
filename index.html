@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع Loving Homes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo جديد"
+                 style="height:4.5rem;vertical-align:middle;margin-left:18px;
+                        box-shadow:0 2px 12px #888;background:#fff;
+                        border-radius:12px;padding:4px;">
+            <span style="font-size:2.7rem;font-weight:bold;
+                         vertical-align:middle;">Loving Homes</span>
+        </div>
+        <div class="menu">
+            <a href="home.html"> الرئيسية</a>
+            <a href="about.html">عن الشركة</a>
+            <a href="service.html">الخدمات</a>
+            <a href="package.html">الحزم</a>
+        </div>
+        <div class="accessibility-toolbar">
+            <button id="darkModeBtn" title="الوضع الليلي" class="btn">🌙</button>
+            <button id="ttsBtn" title="تشغيل القارئ الآلي" class="btn">🔊</button>
+            <button id="incFont" title="تكبير النص" class="btn">+</button>
+            <button id="decFont" title="تصغير النص" class="btn">-</button>
+        </div>
+        <div class="contact">
+            <a href="contact.html">تواصل معنا</a>
+        </div>
+    </nav>
+
+    <div class="full-screen-card-container">
+        <div class="main-content-flex">
+            <!-- العمود الأيسر: الشعار فقط -->
+            <div class="logo-column">
+                <img src="img/logo.png" alt="Logo" class="main-logo">
+                <div class="card video-card">
+                    <video controls class="main-video">
+                        <source src="vid/video.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
+            </div>
+            <!-- العمود الأيمن: النص -->
+            <div class="card about-card" id="about">
+                <div class="content-text">
+                    <h3>مرحبا بك في موقع <span>loving Homes</span></h3>
+                    <p>
+                        نحن في <b>loving Homes</b> نوفر بيئة آمنة ومريحة لرعاية وإقامة الحيوانات الأليفة.
+                    </p>
+                    <p>نتميز بـ:</p>
+                    <ul>
+                        <li>العناية المتخصصة بكل حيوان أليف حسب احتياجاته.</li>
+                        <li>تقديم أنشطة يومية ممتعة ومحفزة.</li>
+                        <li>إشراف مستمر من فريق ذو خبرة لضمان الأمان والراحة.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

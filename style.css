@@ -1,0 +1,710 @@
+/* ملف CSS موحد لجميع الصفحات */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* الوضع الليلي */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode nav {
+    background: #0d0d0d;
+}
+
+body.dark-mode .card,
+body.dark-mode .about-card,
+body.dark-mode .form-card,
+body.dark-mode .service,
+body.dark-mode .package,
+body.dark-mode .section,
+body.dark-mode .container,
+body.dark-mode .about-page .about-card {
+    background: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark-mode .service p,
+body.dark-mode .package p,
+body.dark-mode .section p {
+    color: #b0b0b0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #4CAF50;
+}
+
+body.dark-mode .book-button,
+body.dark-mode .submit-button {
+    background: #4CAF50;
+}
+
+body.dark-mode .book-button:hover,
+body.dark-mode .submit-button:hover {
+    background: #45a049;
+}
+
+body.dark-mode footer {
+    background: #0a0a0a;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode .form-card h1,
+body.dark-mode .form-group label {
+    color: #e0e0e0;
+}
+
+body.dark-mode .main-video {
+    background: #444;
+}
+
+/* الصفحة الرئيسية */
+.logo-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    min-width: 260px;
+    max-width: 350px;
+    flex: 1;
+}
+
+.main-logo {
+    height: 120px;
+    width: auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #888;
+    padding: 8px;
+    margin-bottom: 1rem;
+}
+
+.main-video {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    background: #eee;
+}
+
+.content-text {
+    direction: rtl;
+    text-align: right;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.content-text h3 {
+    direction: rtl;
+    text-align: right;
+    color: #218c3a;
+    font-size: 1.4rem;
+}
+
+.content-text ul {
+    list-style: square inside;
+    margin: 0 0 1.5rem 0;
+}
+
+/* شريط أدوات تسهيل الوصول */
+.accessibility-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+.accessibility-toolbar button.btn {
+    background: #fff;
+    color: #218c3a;
+    border: 1px solid #218c3a;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.accessibility-toolbar button.btn:hover {
+    background: #f0f0f0;
+}
+
+body.dark-mode .accessibility-toolbar button.btn {
+    background: #333;
+    color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+body.dark-mode .accessibility-toolbar button.btn:hover {
+    background: #444;
+}
+
+/* التنقل */
+nav {
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    
+}
+nav .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+nav .menu {
+    flex-grow: 1;
+    display: inline-flex;
+    justify-content: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+nav .contact {
+    background: #555;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* أزرار通用的 */
+button.btn {
+    background: #fff;
+    color: #218c3a;
+    border: 1px solid #218c3a;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+button.btn:hover {
+    background: #f0f0f0;
+}
+
+/* الصفحة الرئيسية - بطاقة كاملة */
+.full-screen-card-container {
+    flex: 1;
+    padding: 1rem;
+}
+.main-content-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* صفحة عن الشركة */
+.about-page .container {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.about-page .about-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.about-page .section {
+    text-align: center;
+}
+.about-page .logo-section {
+    text-align: center;
+}
+.about-page .logo-section img {
+    height: 120px;
+    width: auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #888;
+    padding: 8px;
+}
+.about-page .logo-section .company-name {
+    font-size: 2rem;
+    color: #218c3a;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+.about-page .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.about-page .container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+.about-page .section {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+.about-page .section h2 {
+    color: #218c3a;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.about-page .section p {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 0;
+}
+
+/* صفحة تواصل معنا */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 1rem;
+}
+.form-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+.form-card h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+.submit-button {
+    background-color: #333;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+.submit-button:hover {
+    background-color: #555;
+}
+
+/* الحاويات والبطاقات */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s;
+    height: auto;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 1rem;
+}
+
+/* العناوين */
+h1 {
+    text-align: center;
+    color: #333;
+}
+h2 {
+    color: #218c3a;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+h3 {
+    color: #004d00;
+    font-size: 1.5rem;
+}
+
+/* الخدمات والحزم */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.service {
+    background: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(30% - 40px);
+    text-align: center;
+    transition: transform 0.3s;
+}
+.service:hover {
+    transform: scale(1.05);
+}
+.service img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.service h2 {
+    margin: 10px 0;
+    color: #333;
+}
+.service p {
+    color: #666;
+}
+
+/* زر الحجز */
+.book-button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+.book-button:hover {
+    background-color: #555;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #004d00;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* تحسينات للهواتف */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+    nav .logo {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    nav .menu {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+    nav a {
+        margin: 0.3rem 0;
+        font-size: 1rem;
+    }
+    nav .contact {
+        display: inline-block;
+        margin-top: 0.5rem;
+        text-align: right;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    p, ul {
+        font-size: 1rem;
+    }
+    .main-content-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+    .main-content-flex > div {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .accessibility-toolbar {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .services {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .service {
+        width: 100%;
+        margin: 10px 0;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    p, .service p {
+        font-size: 1rem;
+    }
+    .about-page .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-page .section {
+        padding: 1.5rem;
+    }
+    .about-page .section p {
+        font-size: 1rem;
+    }
+    .about-page .logo-section img {
+        height: 80px;
+    }
+    .about-page .logo-section .company-name {
+        font-size: 1.5rem;
+    }
+    /* الكروت على قد الشاشة - الموبايل */
+    .card,
+    .service,
+    .package,
+    .form-card,
+    .about-card,
+    .section {
+        width: 95% !important;
+        max-width: 95% !important;
+        margin: 0.5rem auto !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+    }
+    .container {
+        width: 95% !important;
+        max-width: 95% !important;
+        padding: 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    nav .menu {
+        flex-direction: row;
+        width: 100%;
+    }
+    nav a {
+        margin: 5px 0;
+        text-align: left;
+    }
+    .accessibility-toolbar {
+        margin-right: 8px;
+    }
+    .accessibility-toolbar button.btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+    }
+    /* الكروت على قد الشاشة */
+    .card,
+    .service,
+    .package,
+    .form-card,
+    .about-card,
+    .section {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0.5rem 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 5px !important;
+    }
+}
+
+/* تحسينات إضافية للموبايل */
+@media (max-width: 320px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav .logo {
+        font-size: 1.2rem;
+    }
+    nav .logo img {
+        height: 2.5rem !important;
+    }
+    nav .logo span {
+        font-size: 1.2rem !important;
+    }
+    nav .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        font-size: 0.9rem;
+    }
+    .accessibility-toolbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-right: 0;
+    }
+    .accessibility-toolbar button.btn {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.85rem;
+    }
+    nav .contact {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+    }
+    /* الكروت على قد الشاشة */
+    .card,
+    .service,
+    .package,
+    .form-card,
+    .about-card,
+    .section {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0.3rem 0 !important;
+        padding: 1rem !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+    .container {
+        padding: 0.3rem !important;
+        width: 100% !important;
+    }
+    .full-screen-card-container {
+        padding: 0.3rem;
+    }
+}
+
+/* للشاشات الصغيرة جداً */
+@media (max-width: 280px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav .logo {
+        font-size: 1rem;
+    }
+    nav .logo img {
+        height: 2rem !important;
+    }
+    nav .menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    nav a {
+        font-size: 0.8rem;
+        margin: 0.2rem 0;
+    }
+    .accessibility-toolbar {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .accessibility-toolbar button.btn {
+        padding: 0.15rem 0.3rem;
+        font-size: 0.75rem;
+    }
+    nav .contact {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.8rem;
+    }
+    /* الكروت على قد الشاشة */
+    .card,
+    .service,
+    .package,
+    .form-card,
+    .about-card,
+    .section {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0.2rem 0 !important;
+        padding: 0.8rem !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 0.9rem;
+    }
+    p {
+        font-size: 0.85rem;
+    }
+}
+
